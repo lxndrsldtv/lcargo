@@ -1,0 +1,85 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "lcargo",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug"
+        },
+        // {
+        //     "name": "lcargo (profile mode)",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "flutterMode": "profile"
+        // },
+        // {
+        //     "name": "lcargo (release mode)",
+        //     "request": "launch",
+        //     "type": "dart",
+        //     "flutterMode": "release"
+        // },
+        {
+            "name": "lc bottom navigation bar demo",
+            "program": "./test/widgets/lc_bottom_navigation_bar_demo.dart",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug"
+        },
+        {
+            "name": "order service example",
+            "cwd": "packages/order_service/example",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug"
+        },
+        {
+            "name": "delivery calculation request demo",
+            "cwd": "packages/order_service/example",
+            "program": "./test/widgets/delivery_calculation_request/delivery_calculation_request_demo.dart",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug"
+        },
+        {
+            "name": "order list demo",
+            "cwd": "packages/order_service/example",
+            "program": "./test/widgets/order_list/order_list_demo.dart",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug"
+        },
+        {
+            "name": "state card demo",
+            "cwd": "packages/order_service/example",
+            "program": "./test/widgets/state_card/state_card_demo.dart",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "debug"
+        },
+        {
+            "name": "ui_kit example",
+            "cwd": "packages/ui_kit/example",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "ui_kit example (profile mode)",
+            "cwd": "packages/ui_kit/example",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "ui_kit example (release mode)",
+            "cwd": "packages/ui_kit/example",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        },
+   ]
+}
