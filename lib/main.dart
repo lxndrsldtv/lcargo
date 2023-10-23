@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:lcargo/src/widgets/lc_bottom_navigation_bar.dart';
+// import 'package:go_router/go_router.dart';
+// import 'package:lcargo/lc_home_page.dart';
+import 'package:lcargo/lc_router.dart';
+import 'package:lcargo/lc_theme.dart';
 
 void main() {
-  runApp(const LCargoApp());
+  runApp(LCApp(
+    lcRouter: LCRouter(),
+  ));
 }
 
-class LCargoApp extends StatelessWidget {
-  const LCargoApp({super.key});
+class LCApp extends StatelessWidget {
+  const LCApp({super.key, required this.lcRouter});
+
+  final LCRouter lcRouter;
 
   @override
   Widget build(BuildContext context) {
@@ -23,25 +29,10 @@ class LCargoApp extends StatelessWidget {
         colorScheme: const ColorScheme.dark(),
         bottomNavigationBarTheme: const LCBottomNavigationBarThemeData.dark2(),
       ),
-      routerConfig: GoRouter(
-        routes: [
-          GoRoute(path: '/', builder: (ctx, st) => const LCargoHomePage()),
-        ]
-      ),
-    );
-  }
-}
-
-class LCargoHomePage extends StatelessWidget {
-  const LCargoHomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Placeholder(),
-      ),
-      bottomNavigationBar: LCBottomNavigationBar(),
+      routerConfig: lcRouter.lcRouter,
+      //  GoRouter(routes: [
+      //   GoRoute(path: '/', builder: (ctx, st) => const LCHomePage()),
+      // ]),
     );
   }
 }

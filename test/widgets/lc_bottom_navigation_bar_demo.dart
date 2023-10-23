@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lcargo/lc_theme.dart';
 import 'package:lcargo/src/widgets/lc_bottom_navigation_bar.dart';
 
 void main() {
