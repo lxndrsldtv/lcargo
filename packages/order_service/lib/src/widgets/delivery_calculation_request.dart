@@ -23,7 +23,6 @@ class DeliveryCalculationRequest extends StatelessWidget {
   Widget build(BuildContext context) {
     log('DeliveryCalculationRequest build');
 
-    //TODO make template for all pages
     final theme = Theme.of(context);
     theme.brightness == Brightness.light
         ? SystemChrome.setSystemUIOverlayStyle(

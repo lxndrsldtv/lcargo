@@ -38,7 +38,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    //TODO make template for all pages
     final theme = Theme.of(context);
     theme.brightness == Brightness.light
         ? SystemChrome.setSystemUIOverlayStyle(

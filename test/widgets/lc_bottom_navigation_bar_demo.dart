@@ -74,7 +74,10 @@ class _LCBottomNavigationBarDemoHomePageState
         ],
       ),
       body: const Placeholder(),
-      bottomNavigationBar: const LCBottomNavigationBar(),
+      bottomNavigationBar: LCBottomNavigationBar(
+        index: 0,
+        onTap: (i) {},
+      ),
       // floatingActionButton: FloatingActionButton(onPressed: _changeTheme),
     );
   }

@@ -1,32 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class LCBottomNavigationBar extends StatefulWidget {
+class LCBottomNavigationBar extends StatelessWidget {
   const LCBottomNavigationBar({
     super.key,
+    required this.index,
+    required this.onTap,
   });
 
-  @override
-  State<LCBottomNavigationBar> createState() => _LCBottomNavigationBarState();
-}
-
-class _LCBottomNavigationBarState extends State<LCBottomNavigationBar> {
-  final _currentIndex = 0;
+  final int index;
+  final void Function(int) onTap;
 
   @override
   Widget build(BuildContext context) {
     final td = Theme.of(context).bottomNavigationBarTheme;
     return BottomNavigationBar(
-      currentIndex: _currentIndex,
+      currentIndex: index,
       type: BottomNavigationBarType.fixed,
       showUnselectedLabels: true,
+      onTap: onTap,
       items: [
         BottomNavigationBarItem(
           label: 'Заказать',
           icon: SvgPicture.asset(
             'assets/images/orders.svg',
             colorFilter: ColorFilter.mode(
-                _currentIndex == 0
+                index == 0
                     ? td.selectedItemColor!
                     : td.unselectedItemColor!,
                 BlendMode.srcIn),
@@ -37,7 +36,7 @@ class _LCBottomNavigationBarState extends State<LCBottomNavigationBar> {
           icon: SvgPicture.asset(
             'assets/images/calculator.svg',
             colorFilter: ColorFilter.mode(
-                _currentIndex == 1
+                index == 1
                     ? td.selectedItemColor!
                     : td.unselectedItemColor!,
                 BlendMode.srcIn),
@@ -48,7 +47,7 @@ class _LCBottomNavigationBarState extends State<LCBottomNavigationBar> {
           icon: SvgPicture.asset(
             'assets/images/faq.svg',
             colorFilter: ColorFilter.mode(
-                _currentIndex == 2
+                index == 2
                     ? td.selectedItemColor!
                     : td.unselectedItemColor!,
                 BlendMode.srcIn),
@@ -59,7 +58,7 @@ class _LCBottomNavigationBarState extends State<LCBottomNavigationBar> {
           icon: SvgPicture.asset(
             'assets/images/profile.svg',
             colorFilter: ColorFilter.mode(
-                _currentIndex == 3
+                index == 3
                     ? td.selectedItemColor!
                     : td.unselectedItemColor!,
                 BlendMode.srcIn),

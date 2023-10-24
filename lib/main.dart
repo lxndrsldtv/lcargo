@@ -1,6 +1,6 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
-// import 'package:go_router/go_router.dart';
-// import 'package:lcargo/lc_home_page.dart';
 import 'package:lcargo/lc_router.dart';
 import 'package:lcargo/lc_theme.dart';
 
@@ -17,6 +17,8 @@ class LCApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log('LCApp build', name: 'lCargo');
+
     return MaterialApp.router(
       title: 'LCargo',
       theme: ThemeData(
