@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:order_service/src/widgets/delivery_calculation_request.dart';
+import 'package:ui_kit/ui_kit.dart';
 
 void main() {
   runApp(const DeliveryCalculationDemo());
@@ -14,31 +15,29 @@ class DeliveryCalculationDemo extends StatelessWidget {
     return MaterialApp(
       title: 'Delivery Calculation Request Demo',
       theme: ThemeData(
-        useMaterial3: true,
         colorScheme: const ColorScheme.light(),
       ),
+      darkTheme: ThemeData(
+        colorScheme: const ColorScheme.dark(),
+      ),
+      themeMode: ThemeMode.light,
+      // themeMode: ThemeMode.dark,
       // debugShowMaterialGrid: true,
       debugShowCheckedModeBanner: false,
-      home: const DeliveryCalculationDemoHomePage(
-          title: 'Delivery Calculation Request Demo Page'),
+      home: const DeliveryCalculationDemoHomePage(),
     );
   }
 }
 
-class DeliveryCalculationDemoHomePage extends StatefulWidget {
-  const DeliveryCalculationDemoHomePage({super.key, required this.title});
+class DeliveryCalculationDemoHomePage extends StatelessWidget {
+  const DeliveryCalculationDemoHomePage({super.key});
 
-  final String title;
-
-  @override
-  State<DeliveryCalculationDemoHomePage> createState() =>
-      _DeliveryCalculationDemoHomePageState();
-}
-
-class _DeliveryCalculationDemoHomePageState
-    extends State<DeliveryCalculationDemoHomePage> {
   @override
   Widget build(BuildContext context) {
-    return const DeliveryCalculationRequest();
+    setStatusBarColorSameAsColorSchemeBackground(context);
+
+    return const Scaffold(
+      body: DeliveryCalculationRequest(),
+    );
   }
 }

@@ -5,3 +5,4 @@ export './src/lc_input_text.dart';
 export './src/lc_page_label.dart';
 export './src/lc_button.dart';
 export './src/lc_checkbox.dart';
+export './src/utils/utility_functions.dart';

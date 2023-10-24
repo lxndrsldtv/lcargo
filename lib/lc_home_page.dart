@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:lcargo/src/utils/utility_functions.dart';
+import 'package:ui_kit/ui_kit.dart';
 import 'package:lcargo/src/widgets/lc_bottom_navigation_bar.dart';
 
 class LCHomePage extends StatelessWidget {
