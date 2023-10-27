@@ -1,6 +1,10 @@
-# lcargo
+# lCargo
 
 Delivery company client Flutter app.
+
+# Demo
+
+https://github.com/lxndrsldtv/lcargo/assets/18658711/5b7867af-443a-499c-a3c8-fcccedbbebde
 
 ## Getting Started
 
