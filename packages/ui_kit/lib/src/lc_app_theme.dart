@@ -11,4 +11,12 @@ class LCAppTheme {
 
   static const bottomNavbarBackgroundColor = Color(0xffF9F9F9);
   static const bottomNavbarSelectedItemColor = Color(0xff1F284D);
+
+  static const lcOrdinaryTextStyle = TextStyle(
+      fontFamily: 'Futura', fontSize: 16, color: LCAppTheme.mainColor);
+
+  static const lcTextInputHintStyle = TextStyle(
+      fontFamily: 'Futura',
+      fontSize: 16.0,
+      color: LCAppTheme.textFieldHintTextColor);
 }

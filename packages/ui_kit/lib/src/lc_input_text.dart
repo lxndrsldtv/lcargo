@@ -22,12 +22,6 @@ class LCInputText extends StatelessWidget {
     borderSide: BorderSide(color: LCAppTheme.mainColor),
   );
 
-  final textStyle = const TextStyle(
-      fontFamily: 'Futura', color: LCAppTheme.mainColor, fontSize: 16.0);
-
-  final labelStyle = const TextStyle(
-      fontFamily: 'Futura', color: LCAppTheme.textFieldHintTextColor);
-
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -35,10 +29,10 @@ class LCInputText extends StatelessWidget {
       onChanged: onChanged,
       focusNode: focusNode,
       textAlignVertical: TextAlignVertical.top,
-      style: textStyle,
+      style: LCAppTheme.lcOrdinaryTextStyle,
       decoration: InputDecoration(
         labelText: labelText,
-        labelStyle: labelStyle,
+        labelStyle: LCAppTheme.lcTextInputHintStyle,
         border: borderStyle,
         enabledBorder: borderStyle,
         focusedBorder: borderStyle.copyWith(
