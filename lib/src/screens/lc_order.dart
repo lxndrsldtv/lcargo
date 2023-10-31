@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lcargo/lc_router.dart';
 
-class LCOrderDetails extends StatelessWidget {
-  const LCOrderDetails({super.key});
+class LCOrder extends StatelessWidget {
+  const LCOrder({super.key});
 
   @override
   Widget build(BuildContext context) {

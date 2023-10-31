@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:lcargo/lc_home_page.dart';
 import 'package:lcargo/src/screens/lc_calculation.dart';
 import 'package:lcargo/src/screens/lc_faq.dart';
-import 'package:lcargo/src/screens/lc_order_details.dart';
+import 'package:lcargo/src/screens/lc_order.dart';
 import 'package:lcargo/src/screens/lc_orders.dart';
 import 'package:lcargo/src/screens/lc_profile.dart';
 
@@ -93,7 +93,7 @@ class LCRouter {
       GoRoute(
         name: orderDetails,
         path: '/orderDetails',
-        builder: (ctx, st) => const LCOrderDetails(),
+        builder: (ctx, st) => const LCOrder(),
       ),
     ],
     debugLogDiagnostics: true,

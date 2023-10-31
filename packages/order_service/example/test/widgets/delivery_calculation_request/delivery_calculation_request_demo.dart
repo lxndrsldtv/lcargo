@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:order_service/src/widgets/delivery_calculation_request.dart';
 import 'package:ui_kit/ui_kit.dart';
+// import 'package:ui_kit/ui_kit.dart';
 
 void main() {
   runApp(const DeliveryCalculationDemo());
@@ -16,6 +17,10 @@ class DeliveryCalculationDemo extends StatelessWidget {
       title: 'Delivery Calculation Request Demo',
       theme: ThemeData(
         colorScheme: const ColorScheme.light(),
+        appBarTheme: const AppBarTheme().copyWith(
+          backgroundColor: Colors.white,
+          elevation: 0.0,
+        ),
       ),
       darkTheme: ThemeData(
         colorScheme: const ColorScheme.dark(),
@@ -34,10 +39,11 @@ class DeliveryCalculationDemoHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    setStatusBarColorSameAsColorSchemeBackground(context);
+    // setStatusBarColorSameAsColorSchemeBackground(context);
 
-    return const Scaffold(
-      body: DeliveryCalculationRequest(),
+    return Scaffold(
+      appBar: AppBar(),
+      body: const DeliveryCalculationRequest(),
     );
   }
 }

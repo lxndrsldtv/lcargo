@@ -9,25 +9,12 @@ class DeliveryOrderList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return
-        // Column(
-        // children: [
-        //   const PageLabel(labelText: '',),
-        //   Text(
-        //     'Заказы',
-        //     style: Theme.of(context).textTheme.titleLarge,
-        //   ),
-        //   Flexible(
-        //     child:
-        ListView.builder(
+    return ListView.builder(
       itemBuilder: (context, index) {
         return DeliveryOrderCard(
             deliveryOrderViewModel:
                 deliveryOrderRepository.getOrderByIndex(index));
       },
-      // ),
-      //   ),
-      // ],
     );
   }
 }
