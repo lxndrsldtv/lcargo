@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:lcargo/lc_router.dart';
+// import 'package:go_router/go_router.dart';
+// import 'package:lcargo/lc_router.dart';
 import 'package:lcargo/src/widgets/lc_page.dart';
+import 'package:order_service/order_service.dart';
 
 class LCOrders extends StatelessWidget {
   const LCOrders({super.key});
@@ -10,17 +11,20 @@ class LCOrders extends StatelessWidget {
   Widget build(BuildContext context) {
     return LCPage(
       title: 'Заказы',
-      body: Column(
-        children: [
-          const Text('Orders'),
-          ElevatedButton(
-            onPressed: () {
-              context.goNamed(orderDetails);
-            },
-            child: const Text('To Order Details'),
-          ),
-        ],
+      body: DeliveryOrderList(
+        deliveryOrderRepository: TemporaryDeliveryOrderRepository(),
       ),
+      // Column(
+      //   children: [
+      //     const Text('Orders'),
+      //     ElevatedButton(
+      //       onPressed: () {
+      //         context.goNamed(orderDetails);
+      //       },
+      //       child: const Text('To Order Details'),
+      //     ),
+      //   ],
+      // ),
     );
   }
 }

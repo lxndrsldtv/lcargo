@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:order_service/src/widgets/delivery_calculation_request.dart';
-import 'package:ui_kit/ui_kit.dart';
-// import 'package:ui_kit/ui_kit.dart';
 
 void main() {
   runApp(const DeliveryCalculationDemo());
