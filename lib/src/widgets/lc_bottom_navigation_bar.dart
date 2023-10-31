@@ -21,7 +21,7 @@ class LCBottomNavigationBar extends StatelessWidget {
       onTap: onTap,
       items: [
         BottomNavigationBarItem(
-          label: 'Заказать',
+          label: 'Заказы',
           icon: SvgPicture.asset(
             'assets/images/orders.svg',
             colorFilter: ColorFilter.mode(
