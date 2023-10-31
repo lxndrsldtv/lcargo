@@ -21,15 +21,7 @@ class DeliveryOrderList extends StatelessWidget {
             },
           )
         : const Center(
-          //TODO create ui kit element for this text style (lc_ordinar_text)
-            child: Text(
-              'Список заказов пуст.',
-              style: TextStyle(
-                  fontFamily: 'Futura',
-                  fontSize: 16,
-                  color: LCAppTheme.mainColor),
-              overflow: TextOverflow.ellipsis,
-            ),
+            child: LCTextFut16('Список заказов пуст.'),
           );
   }
 }

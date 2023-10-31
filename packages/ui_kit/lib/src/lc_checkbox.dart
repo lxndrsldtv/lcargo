@@ -57,14 +57,7 @@ class _LCCheckboxState extends State<LCCheckbox> {
           width: 16.0,
         ),
         Flexible(
-          child: Text(
-            widget.label,
-            style: const TextStyle(
-                fontFamily: 'Futura',
-                fontSize: 16,
-                color: LCAppTheme.mainColor),
-            overflow: TextOverflow.ellipsis,
-          ),
+          child: LCTextFut16(widget.label),
         ),
       ],
     );

@@ -109,4 +109,7 @@ class FakeDeliveryOrderRepository implements DeliveryOrderRepository {
 
     return streamController.stream;
   }
+  
+  @override
+  int get orderCount => orders.length;
 }

@@ -14,17 +14,6 @@ class LCOrders extends StatelessWidget {
       body: DeliveryOrderList(
         deliveryOrderRepository: TemporaryDeliveryOrderRepository(),
       ),
-      // Column(
-      //   children: [
-      //     const Text('Orders'),
-      //     ElevatedButton(
-      //       onPressed: () {
-      //         context.goNamed(orderDetails);
-      //       },
-      //       child: const Text('To Order Details'),
-      //     ),
-      //   ],
-      // ),
     );
   }
 }
