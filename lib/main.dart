@@ -32,9 +32,7 @@ class LCApp extends StatelessWidget {
         bottomNavigationBarTheme: const LCBottomNavigationBarThemeData.dark2(),
       ),
       routerConfig: lcRouter.lcRouter,
-      //  GoRouter(routes: [
-      //   GoRoute(path: '/', builder: (ctx, st) => const LCHomePage()),
-      // ]),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

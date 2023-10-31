@@ -52,9 +52,10 @@ class _UIKitHomePageState extends State<UIKitHomePage> {
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             children: [
+              const Divider(),
               const Text('LCPageLabel'),
               const LCPageLabel(labelText: 'Label Заказы'),
-              const SizedBox(width: 0.0, height: 16.0),
+              const Divider(),
               const Text('LCInputText'),
               LCInputText(
                 labelText: 'Откуда (1 line)',
@@ -68,24 +69,28 @@ class _UIKitHomePageState extends State<UIKitHomePage> {
                 onChanged: (t) => log(t),
                 onTap: () {},
               ),
-              const SizedBox(width: 0.0, height: 16.0),
+              const Divider(),
               const Text('LCButton'),
               LCButton(onPressed: () {}, label: 'Оставить заявку'),
-              const SizedBox(width: 0.0, height: 16.0),
+              const Divider(),
               const Text('LCCheckbox'),
               LCCheckbox(
                   label: 'Обрешетка',
                   onChanged: (v) =>
                       log('checkbox: ${v ? 'checked' : 'unchecked'}')),
+              const Divider(),
             ],
           ),
         ),
       ),
       // floatingActionButton: FloatingActionButton(
-      //   onPressed: _changeState,
-      //   tooltip: 'Change state',
-      //   child: const Icon(Icons.change_circle),
-      // ), // This trailing comma makes auto-formatting nicer for build methods.
+      //   onPressed: () => Navigator.of(context).push(MaterialPageRoute(
+      //       builder: (ctx) => const LCPage(
+      //             labelText: 'LCPage',
+      //           ))),
+      //   tooltip: 'Open LCPage',
+      //   child: const Icon(Icons.pageview),
+      // ),
     );
   }
 }

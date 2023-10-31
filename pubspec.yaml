@@ -100,3 +100,10 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: Futura
+      fonts:
+        - asset: packages/ui_kit/fonts/OpenSans-Regular.ttf
+    - family: Unbounded
+      fonts:
+        - asset: packages/ui_kit/fonts/Unbounded-Regular.ttf
