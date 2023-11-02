@@ -38,6 +38,7 @@ class LCApp extends StatelessWidget {
         AppLocalizations.delegate,
         OrderServiceLocalizations.delegate,
         GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: const [
         ...AppLocalizations.supportedLocales,
