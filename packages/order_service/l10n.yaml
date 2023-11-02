@@ -1,0 +1,6 @@
+arb-dir: lib/l10n
+template-arb-file: order_service_en.arb
+output-localization-file: order_service_localizations.dart
+output-class: OrderServiceLocalizations
+output-dir: lib/src/l10n
+synthetic-package: false

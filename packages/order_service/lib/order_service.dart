@@ -7,3 +7,4 @@ export './src/widgets/delivery_calculation_request.dart';
 export './src/widgets/delivery_order_card.dart';
 export './src/widgets/delivery_order_card_row.dart';
 export './src/widgets/delivery_order_list.dart';
+export './src/l10n/order_service_localizations.dart';

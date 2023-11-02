@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:order_service/src/repositories/delivery_order_repository.dart';
-import 'package:order_service/src/widgets/delivery_order_card.dart';
+import 'package:order_service/order_service.dart';
 import 'package:ui_kit/ui_kit.dart';
 
 class DeliveryOrderList extends StatelessWidget {
@@ -10,6 +9,8 @@ class DeliveryOrderList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final orderServiceLocalizations = OrderServiceLocalizations.of(context);
+
     return deliveryOrderRepository.orderCount > 0
         ? ListView.builder(
             itemBuilder: (context, index) {
@@ -20,8 +21,9 @@ class DeliveryOrderList extends StatelessWidget {
                   : null;
             },
           )
-        : const Center(
-            child: LCTextFut16('Список заказов пуст.'),
+        : Center(
+            child: LCTextFut16(orderServiceLocalizations?.theOrderLisIsEmpty ??
+                'Список заказов пуст.'),
           );
   }
 }
