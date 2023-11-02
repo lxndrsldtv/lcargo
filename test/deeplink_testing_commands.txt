@@ -1,0 +1,5 @@
+iOS
+xcrun simctl openurl booted 'lcargo://lcargo.com/faq'
+
+Android
+~/Library/Android/sdk/platform-tools/adb shell am start -a android.intent.action.VIEW -c android.intent.category.BROWSABLE -d 'lcargo://lcargo.com/profile'
