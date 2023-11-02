@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:lcargo/src/l10n/app_localizations.dart';
 
 class LCBottomNavigationBar extends StatelessWidget {
   const LCBottomNavigationBar({
@@ -14,6 +15,7 @@ class LCBottomNavigationBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final td = Theme.of(context).bottomNavigationBarTheme;
+    final appLocalizations = AppLocalizations.of(context);
     return BottomNavigationBar(
       currentIndex: index,
       type: BottomNavigationBarType.fixed,
@@ -21,7 +23,7 @@ class LCBottomNavigationBar extends StatelessWidget {
       onTap: onTap,
       items: [
         BottomNavigationBarItem(
-          label: 'Заказы',
+          label: appLocalizations?.tabLabelOrders ?? 'Заказы',
           icon: SvgPicture.asset(
             'assets/images/orders.svg',
             colorFilter: ColorFilter.mode(
@@ -32,7 +34,7 @@ class LCBottomNavigationBar extends StatelessWidget {
           ),
         ),
         BottomNavigationBarItem(
-          label: 'Рассчитать',
+          label: appLocalizations?.tabLabelCalculate ?? 'Рассчитать',
           icon: SvgPicture.asset(
             'assets/images/calculator.svg',
             colorFilter: ColorFilter.mode(
@@ -43,7 +45,7 @@ class LCBottomNavigationBar extends StatelessWidget {
           ),
         ),
         BottomNavigationBarItem(
-          label: 'FAQ',
+          label: appLocalizations?.tabLabelFaq ?? 'ЧаВо',
           icon: SvgPicture.asset(
             'assets/images/faq.svg',
             colorFilter: ColorFilter.mode(
@@ -54,7 +56,7 @@ class LCBottomNavigationBar extends StatelessWidget {
           ),
         ),
         BottomNavigationBarItem(
-          label: 'Профиль',
+          label: appLocalizations?.tabLabelProfile ?? 'Профиль',
           icon: SvgPicture.asset(
             'assets/images/profile.svg',
             colorFilter: ColorFilter.mode(
