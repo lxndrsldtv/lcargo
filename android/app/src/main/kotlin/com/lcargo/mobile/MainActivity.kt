@@ -1,4 +1,4 @@
-package com.example.lcargo
+package com.lcargo.mobile
 
 import io.flutter.embedding.android.FlutterActivity
 
