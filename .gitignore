@@ -10,6 +10,9 @@
 .svn/
 migrate_working_dir/
 
+# Firebase standalone CLI binary
+firebase-tools-macos
+
 # IntelliJ related
 *.iml
 *.ipr

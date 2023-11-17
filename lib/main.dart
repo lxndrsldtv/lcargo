@@ -1,13 +1,31 @@
 import 'dart:developer';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:lcargo/firebase_options.dart';
 import 'package:lcargo/lc_router.dart';
 import 'package:lcargo/lc_theme.dart';
 import 'package:lcargo/src/l10n/app_localizations.dart';
+import 'package:lcargo/src/services/lc_notification_service.dart';
 import 'package:order_service/order_service.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  final token = await FirebaseMessaging.instance.getToken();
+  print('token: $token');
+
+
+  final lcNotificationService = LCNotificationService();
+  await Future.delayed(const Duration(seconds: 1));
+  lcNotificationService.displayLocalNotification();
+
   runApp(LCApp(
     lcRouter: LCRouter(),
   ));
@@ -20,7 +38,7 @@ class LCApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log('LCApp build', name: 'lCargo');
+    log('build', name: 'lCargo:LCApp');
 
     return MaterialApp.router(
       title: 'LCargo',
