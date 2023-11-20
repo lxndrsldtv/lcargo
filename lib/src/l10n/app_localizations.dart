@@ -122,6 +122,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Profile'**
   String get tabLabelProfile;
+
+  /// No description provided for @pageTitleOrders.
+  ///
+  /// In en, this message translates to:
+  /// **'Orders'**
+  String get pageTitleOrders;
+
+  /// No description provided for @pageTitleCalculate.
+  ///
+  /// In en, this message translates to:
+  /// **'Calculate'**
+  String get pageTitleCalculate;
+
+  /// No description provided for @pageTitleFaq.
+  ///
+  /// In en, this message translates to:
+  /// **'FAQ'**
+  String get pageTitleFaq;
+
+  /// No description provided for @pageTitleProfile.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get pageTitleProfile;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

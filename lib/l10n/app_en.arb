@@ -3,5 +3,9 @@
     "tabLabelOrders": "Orders",
     "tabLabelCalculate": "Calculate",
     "tabLabelFaq": "FAQ",
-    "tabLabelProfile": "Profile"
+    "tabLabelProfile": "Profile",
+    "pageTitleOrders": "Orders",
+    "pageTitleCalculate": "Calculate",
+    "pageTitleFaq": "FAQ",
+    "pageTitleProfile": "Profile"
 }

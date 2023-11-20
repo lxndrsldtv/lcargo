@@ -3,5 +3,10 @@
     "tabLabelOrders": "Заказы",
     "tabLabelCalculate": "Рассчитать",
     "tabLabelFaq": "ЧаВо",
-    "tabLabelProfile": "Профиль"
+    "tabLabelProfile": "Профиль",
+    "pageTitleOrders": "Заказы",
+    "pageTitleCalculate": "Рассчитать",
+    "pageTitleFaq": "ЧаВо",
+    "pageTitleProfile": "Профиль"
+
 }

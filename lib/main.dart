@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'dart:io';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -14,13 +15,15 @@ import 'package:order_service/order_service.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  // for now firebase configured for android platform only
+  if (Platform.isAndroid) {
+    await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform,
+    );
 
-  final token = await FirebaseMessaging.instance.getToken();
-  print('token: $token');
-
+    final token = await FirebaseMessaging.instance.getToken();
+    print('token: $token');
+  }
 
   final lcNotificationService = LCNotificationService();
   await Future.delayed(const Duration(seconds: 1));
@@ -62,7 +65,7 @@ class LCApp extends StatelessWidget {
         ...AppLocalizations.supportedLocales,
         ...OrderServiceLocalizations.supportedLocales,
       ],
-      locale: const Locale('ru'),
+      // locale: const Locale('ru'),
       routerConfig: lcRouter.lcRouter,
       debugShowCheckedModeBanner: false,
     );

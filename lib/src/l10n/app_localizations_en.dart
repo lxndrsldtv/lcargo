@@ -18,4 +18,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get tabLabelProfile => 'Profile';
+
+  @override
+  String get pageTitleOrders => 'Orders';
+
+  @override
+  String get pageTitleCalculate => 'Calculate';
+
+  @override
+  String get pageTitleFaq => 'FAQ';
+
+  @override
+  String get pageTitleProfile => 'Profile';
 }

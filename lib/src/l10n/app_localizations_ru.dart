@@ -18,4 +18,16 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get tabLabelProfile => 'Профиль';
+
+  @override
+  String get pageTitleOrders => 'Заказы';
+
+  @override
+  String get pageTitleCalculate => 'Рассчитать';
+
+  @override
+  String get pageTitleFaq => 'ЧаВо';
+
+  @override
+  String get pageTitleProfile => 'Профиль';
 }

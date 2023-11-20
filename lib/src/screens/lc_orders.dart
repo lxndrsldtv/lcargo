@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:go_router/go_router.dart';
-// import 'package:lcargo/lc_router.dart';
+import 'package:lcargo/lc_app_dependencies_config.dart';
+import 'package:lcargo/src/l10n/app_localizations.dart';
 import 'package:lcargo/src/widgets/lc_page.dart';
 import 'package:order_service/order_service.dart';
 
@@ -9,10 +9,12 @@ class LCOrders extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appLocalizations = AppLocalizations.of(context);
     return LCPage(
-      title: 'Заказы',
+      title: appLocalizations?.pageTitleOrders ?? 'Заказы',
       body: DeliveryOrderList(
-        deliveryOrderRepository: TemporaryDeliveryOrderRepository(),
+        deliveryOrderRepository:
+            LCAppDependenciesConfig().configureDeliveryOrderRepository()(),
       ),
     );
   }
