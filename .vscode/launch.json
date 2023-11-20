@@ -9,6 +9,11 @@
             "name": "lcargo",
             "request": "launch",
             "type": "dart",
+            "program": "lib/main.dart",
+            "args": [
+                "--dart-define-from-file",
+                "./lib/env_config.json"
+            ],
             "flutterMode": "debug"
         },
         // {
