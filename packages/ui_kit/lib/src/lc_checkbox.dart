@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 import '../ui_kit.dart';
@@ -23,6 +25,8 @@ class _LCCheckboxState extends State<LCCheckbox> {
 
   @override
   void initState() {
+    log('initState',
+            name: 'lCargo:LCUIKit:LCCheckboxState');
     value = widget.value;
     super.initState();
   }
@@ -36,6 +40,8 @@ class _LCCheckboxState extends State<LCCheckbox> {
 
   @override
   Widget build(BuildContext context) {
+    log('build',
+            name: 'lCargo:LCUIKit:LCCheckboxState');
     return Row(
       children: [
         InkWell(

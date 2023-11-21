@@ -43,12 +43,20 @@
             "flutterMode": "debug"
         },
         {
-            "name": "delivery calculation request demo",
+            "name": "delivery calculation request demo debug",
             "cwd": "packages/order_service/example",
             "program": "./test/widgets/delivery_calculation_request/delivery_calculation_request_demo.dart",
             "request": "launch",
             "type": "dart",
             "flutterMode": "debug"
+        },
+        {
+            "name": "delivery calculation request demo profile",
+            "cwd": "packages/order_service/example",
+            "program": "./test/widgets/delivery_calculation_request/delivery_calculation_request_demo.dart",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
         },
         {
             "name": "order list demo",
